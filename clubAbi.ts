@@ -432,17 +432,3 @@ export const clubABI = [
         type: "function",
     },
 ];
-
-async function sellShare(subject: string, balance: number, nonce: number) {
-    try {
-        await client.writeContract({
-            address: "0x201e95f275F39a5890C976Dc8A3E1b4Af114E635",
-            abi: clubABI,
-            functionName: "sellToken",
-            args: [subject, 1, balance, "0x1b3552f6dc00c2a804a5e482d2c3f50ca8fcc924"],
-            nonce: nonce,
-        });
-    } catch (error) {
-        console.log(error);
-    }
-}

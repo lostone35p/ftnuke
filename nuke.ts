@@ -8,6 +8,8 @@ interface SubjectBalance {
   balance: number;
 }
 
+const excludedClubs: [string] = []
+
 const YOURPK = `0x${process.env.YOURPK}` as `0x{string}`
 const YOURRPC = process.env.RPC
 const YOURADDY = process.env.YOURADDY as `0x{string}`
@@ -61,7 +63,7 @@ async function getHoldings(address: string, jwt: string) {
 async function sendSell(address: string, jwt: string) {
   const portfolio = await getHoldings(address, jwt);
   const idBalance = portfolio
-    .filter((item: SubjectBalance) => !item.subject.includes("0x"))
+    .filter((item: SubjectBalance) => !item.subject.includes("0x") && !excludedClubs.includes(item.subject))
     .map((item: SubjectBalance) => ({
       subject: item.subject,
       balance: item.balance,

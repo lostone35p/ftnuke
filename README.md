@@ -1,5 +1,11 @@
 ## How to use
-* install bun
+* install bun https://bun.sh/docs/installation
+
+* clone repo
+```
+git clone https://github.com/lostone35p/ftnuke
+```
+
 * cd to directory
 ```
 cd ./ftnuke
@@ -10,14 +16,20 @@ cd ./ftnuke
 bun i
 ```
 
-* create .env file and add the following
+* create .env file 
 ```
-YOURPK = <Paste Here your Pk>
-RPC = <Paste Here your RPC HTTP>
-YOURADDY = <Paste Here your Address>
+touch .env
 ```
 
-* Run the script you want
+* add the following to .env
+
+```
+YOURPK = Paste Here your Pk
+RPC = Paste Here your RPC HTTP 
+YOURADDY = Paste Here your Address
+```
+
+* run the script you want
 - clubSnipe needs to be configured with the feed and the user you want to snipe inside the script
 - nuke needs to be configured with your address and your JWT from Friend tech inside the script
 ```

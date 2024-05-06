@@ -9,6 +9,8 @@ interface SubjectBalance {
 }
 
 
+const excludedClubs: string[] = []
+
 const YOURPK = `0x${process.env.YOURPK}` as `0x{string}`
 const YOURRPC = process.env.RPC
 const YOURADDY = process.env.YOURADDY as `0x{string}`

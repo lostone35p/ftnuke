@@ -2,7 +2,7 @@
 * install bun
 * cd to directory
 ```
-cd ./this/path
+cd ./ftnuke
 ```
 
 * install packages
